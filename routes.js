@@ -17,3 +17,11 @@
  
  
    }
+   
+   
+   
+ function render(res.viewname)
+ {
+ 
+   res.render()
+ }
