@@ -1,0 +1,32 @@
+<h1>CXCMathStudy</h1>
+<script>
+ (function(){
+     
+	 
+	 $( "#dialog" ).dialog();
+  
+   $("#userSignUpForm").dialog({ modal: true });
+    
+  $("submit").click(function(e)
+  {
+     $("#userSignUpForm").dialog("open");
+	 alert("here");
+	e.preventDefault();
+  });
+ })();
+</script>
+<?php
+echo $this->Form->create("user");
+        
+		
+		echo $this->Form->input('First Name');
+        echo $this->Form->input('Last Name');   //text
+        echo $this->Form->input('Email Address');   //password
+        echo $this->Form->input('Password');   //day, month, year, hour, minute, meridian
+        echo $this->Form->submit('Register'); 
+		echo $this->Form->end();
+?>
+
+<div id="dialog" title="Basic dialog">
+<p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
+</div>
